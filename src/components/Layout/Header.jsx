@@ -8,7 +8,7 @@ const Header = () => {
           <Link className="lnk" to="/">Redux-Crud</Link>
           <div className="cate_prod">
             <Link className="lnk" to="/categories">Categories</Link>
-            <Link className="lnk" to="/products">Products</Link>
+            {/* <Link className="lnk" to="/products">Products</Link> */}
           </div>
         </div>
     </header>
