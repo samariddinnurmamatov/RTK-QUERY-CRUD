@@ -1,10 +1,10 @@
 import { useState } from "react";
-import Loading from "../components/Loading/loading";
 import CategoryCard from "../components/card/CategoryCard";
 import CategorySearchForm from "../components/form/CategorySearchForm";
 import { useAddCategoryMutation, useGetCategoriesQuery } from "../redux/query_services/categoryServices"
 import ModalForm from "../components/modal/ModalForm";
 import CategoryForm from "../components/form/CategoryForm";
+import Loading from "../components/Loading/Loading";
 
 
 const CategoriesP = () => {
