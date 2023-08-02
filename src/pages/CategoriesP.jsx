@@ -10,7 +10,7 @@ import CategoryForm from "../components/form/CategoryForm";
 const CategoriesP = () => {
   const [ search, setSearch] = useState("");
   const [ show, setShow] = useState(false);
-  const [ category, setCategory ] = useState({name: "", avatar: "", lastName: "", firstName: "", phoneNumber: "", email: "",});
+  const [ category ] = useState({name: "", avatar: "", lastName: "", firstName: "", phoneNumber: "", email: "",});
   
   const { data: categories, isLoading, refetch } = useGetCategoriesQuery({search});
   const [ addData ] = useAddCategoryMutation();
