@@ -6,11 +6,11 @@ const ModalForm = ({show = false, closeModal,  name = "", children, values= {}, 
   const [ validated, setValidated ] = useState(false);
   const [ data, setData ] = useState(values)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.currentTarget;
     if (form.checkValidity()) {
-      submit(data)
+      await submit(data)
       closeModal()
     } else {
       setValidated(true)

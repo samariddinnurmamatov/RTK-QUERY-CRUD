@@ -30,22 +30,22 @@ const categoryServices = createApi({
       // invalidatesTags: ["Category"],
     }),
     // updateCategory,
-    // updateCategory: builder.mutation({
-    //   query: (body, id) => ({
-    //     url: `category/${id}`,
-    //     method: "PUT",
-    //     body,
-    //   }),
-    //   // invalidatesTags: ["Category"],
-    // }),
+    updateCategory: builder.mutation({
+      query: (body, id) => ({
+        url: `category/${id}`,
+        method: "PUT",
+        body,
+      }),
+      invalidatesTags: ["Category"],
+    }),
     // deleteCategory,
-    // deleteCategory: builder.mutation({
-    //   query: (id) => ({
-    //     url: `category/${id}`,
-    //     method: "DELETE",
-    //   }),
-    //   // invalidatesTags: ["Category"],
-    // }),
+    deleteCategory: builder.mutation({
+      query: (id) => ({
+        url: `category/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["Category"],
+    }),
   }),
 });
 
@@ -53,8 +53,8 @@ export const {
   useGetCategoriesQuery,
   // useGetCategoryQuery,
   useAddCategoryMutation,
-  // useUpdateCategoryMutation,
-  // useDeleteCategoryMutation,
+  useUpdateCategoryMutation,
+  useDeleteCategoryMutation,
 } = categoryServices;
 
 export default categoryServices;

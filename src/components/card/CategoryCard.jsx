@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './card.css'
 
 const CategoryCard = (props) => {
-  const { avatar, lastName, firstName, phoneNumber, email, id } = props;
+  const { avatar, lastName, firstName, phoneNumber, email, delet, edit, id } = props;
   return (
     <div className="card mb-4">
       <img src={avatar} className="card-img-top" alt="..." />
@@ -16,10 +16,13 @@ const CategoryCard = (props) => {
           <Link to={`/categories/${id}`} className="btn btn-primary">
             Go products {id}
           </Link>
-          <Link className="btn btn-danger">
+          <Link className="btn btn-danger" onClick={delet}>
             Delete
           </Link>
-        </div>
+        </div><br />
+        <Link className="btn btn-primary" onClick={edit}>
+          Edit
+        </Link>
       </div>
     </div>
   );
@@ -32,6 +35,8 @@ CategoryCard.propTypes = {
   phoneNumber: PropTypes.string,
   email: PropTypes.string,
   id: PropTypes.string,
+  delet: PropTypes.func.isRequired,
+  edit: PropTypes.func.isRequired,
 };
 
 export default CategoryCard
